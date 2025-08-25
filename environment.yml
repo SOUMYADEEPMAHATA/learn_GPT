@@ -1,0 +1,34 @@
+name: torch-env
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  # --- Core Python ---
+  - python=3.10
+  - pip
+
+  # --- PyTorch with CUDA ---
+  # IMPORTANT: Change the pytorch-cuda version to match your system's
+  # CUDA version from the `nvidia-smi` command.
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda
+
+  # --- Core Data Science & ML Libraries ---
+  - scikit-learn
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+
+  # --- Hugging Face Ecosystem ---
+  - transformers
+  - datasets
+  - accelerate
+
+  # --- Development & Utilities ---
+  - jupyterlab
+  - tqdm
